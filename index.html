@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="market">
+    <div class="base">
+        <div id="anim1" class="staff">
+            <h1 class="content">Кукуруза</h1>
+            <h3 class="content">23</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="buy(1)" class="content">Купить</h2>
+        </div>
+        <div id="anim2" class="staff">
+            <h1 class="content">Помидор</h1>
+            <h3 class="content">24</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="buy(2)" class="content">Купить</h2>
+        </div>
+        <div id="anim3" class="staff">
+            <h1 class="content">Огурец</h1>
+            <h3 class="content">25</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="buy(3)" class="content">Купить</h2>
+        </div>
+        <div id="anim4" class="staff">
+            <h1 class="content">Банан</h1>
+            <h3 class="content">26</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="buy(4)" class="content">Купить</h2>
+        </div>
+        <div id="anim5" class="staff">
+            <h1 class="content">Яблоко</h1>
+            <h3 class="content">27</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="buy(5)" class="content">Купить</h2>
+        </div>
+    </div>
+    <div class="basket">
+        <div id="an1" class="staff1">
+            <h1 class="content">Кукуруза</h1>
+            <h3 class="content">23</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="del(1)" class="content">Убрать</h2>
+        </div>
+        <div id="an2" class="staff1">
+            <h1 class="content">Помидор</h1>
+            <h3 class="content">24</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="del(2)" class="content">Убрать</h2>
+        </div>
+        <div id="an3" class="staff1">
+            <h1 class="content">Огурец</h1>
+            <h3 class="content">25</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="del(3)" class="content">Убрать</h2>
+        </div>
+        <div id="an4" class="staff1">
+            <h1 class="content">Банан</h1>
+            <h3 class="content">26</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="del(4)" class="content">Убрать</h2>
+        </div>
+        <div id="an5" class="staff1">
+            <h1 class="content">Яблоко</h1>
+            <h3 class="content">27</h3>
+            <h4 class="content_1">Руб.</h4>
+            <h2 onclick="del(5)" class="content">Убрать</h2>
+        </div>
+        <div class="check">
+            <p id="sum1" class="">Итого:</з>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var counter1=0;
+    var counter2=0;
+    var counter3=0;
+    var counter4=0;
+    var counter5=0;
+    var elem1 = document.getElementById("anim1");
+    var elem2 = document.getElementById("anim2");
+    var elem3 = document.getElementById("anim3");
+    var elem4 = document.getElementById("anim4");
+    var elem5 = document.getElementById("anim5");
+    var el1 = document.getElementById("an1");
+    var el2 = document.getElementById("an2");
+    var el3 = document.getElementById("an3");
+    var el4 = document.getElementById("an4");
+    var el5 = document.getElementById("an5");
+    let sum =0;
+    var sum1=document.getElementById("sum1");
+    sum1.innerHTML="Итого: "+ sum +" Руб.";
+
+    function buy(a){
+        var pos=950;
+        switch (a){
+            case 1:
+                elem1.style.right = 1900 +'px';
+                elem1.style.position = 'absolute';
+                el1.style.position ='relative';
+                el1.style.left = 0 + 'px';
+                sum=sum+23;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break;
+            case 2:
+                elem2.style.right = 1900 +'px';
+                elem2.style.position = 'absolute';
+                el2.style.position ='relative';
+                el2.style.left = 0 + 'px';
+                sum=sum+24;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break
+            case 3:
+                elem3.style.right = 1900 +'px';
+                elem3.style.position = 'absolute';
+                el3.style.position ='relative';
+                el3.style.left = 0 + 'px';
+                sum=sum+25;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break;
+            case 4:
+                elem4.style.right = 1900 +'px';
+                elem4.style.position = 'absolute';
+                el4.style.position ='relative';
+                el4.style.left = 0 + 'px';
+                sum=sum+26;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break;
+            case 5:
+                elem5.style.right = 1900 +'px';
+                elem5.style.position = 'absolute';
+                el5.style.position ='relative';
+                el5.style.left = 0 + 'px';
+                sum=sum+27;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break;
+
+        }
+    }  
+
+    function del(a){
+        pos=1900;
+        switch (a){
+            case 1:
+                el1.style.left = pos +'px';
+                el1.style.position = 'absolute';
+                elem1.style.position ='relative';
+                elem1.style.right = 0 + 'px';
+                sum=sum-23;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break;
+            case 2:
+                el2.style.left = pos +'px';
+                el2.style.position = 'absolute';
+                elem2.style.position ='relative';
+                elem2.style.right = 0 + 'px';
+                sum=sum-24;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break
+            case 3:
+                el3.style.left = pos +'px';
+                el3.style.position = 'absolute';
+                elem3.style.position ='relative';
+                elem3.style.right = 0 + 'px';
+                sum=sum-25;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break;
+            case 4:
+                pos=pos+100;
+                el4.style.left = pos +'px';
+                el4.style.position = 'absolute';
+                elem4.style.position ='relative';
+                elem4.style.right = 0 + 'px';
+                sum=sum-26;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break;
+            case 5:
+                el5.style.left = pos +'px';
+                el5.style.position = 'absolute';
+                elem5.style.position ='relative';
+                elem5.style.right = 0 + 'px';
+                sum=sum-27;
+                sum1.innerHTML="Итого: "+ sum +" Руб.";
+            break;
+
+        }
+    }
+</script>
+

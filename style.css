@@ -1,0 +1,58 @@
+.market{
+    height:1200px;
+    width:1900px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow:hidden;
+}
+.shop{
+    width:950px;
+    height:1200px;
+    background-color: #808080;
+    float: left;
+    z-index: 2;
+}
+.basket{
+    width:950px;
+    height:1200px;
+    background-color: gainsboro;
+    float: right;
+    z-index: 20;
+    position: absolute;
+    margin-left:950px;
+}
+.staff{
+    width:950px;
+    height:100px;
+    background-color: aquamarine;
+    position: relative;
+    display: grid;
+    grid-template-columns:70% 2% 18% 10%;
+}
+.staff1{
+    width:950px;
+    height:100px;
+    background-color: lightsalmon;
+    position: absolute;
+    display: grid;
+    grid-template-columns:70% 2% 18% 10%;
+    left: 1900px;
+}
+.content{
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-right:auto;
+    margin-left:auto;
+}
+.content_1{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.check{
+    height:800px;
+    width:950px;
+    position:absolute;
+    top:500px;
+    background-color: whitesmoke;
+    z-index: 10;
+}

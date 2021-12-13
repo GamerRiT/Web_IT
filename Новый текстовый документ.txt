@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body class="market">
+    <div class="basket"></div>
+    <div id="anime" class="staff">
+        <h1 class="content">Кукуруза</h1>
+        <h2 onclick="buy()" class="content">Купить</h2>
+    </div>
+    <div id="anime1" class="staff">
+        <h1 class="content">Помидор</h1>
+        <h2 onclick="buy1()" class="content">Купить</h2>
+    </div>
+    <div id="anime2" class="staff">
+        <h1 class="content">Огурец</h1>
+        <h2 onclick="buy2()" class="content">Купить</h2>
+    </div>
+    <div id="anime3" class="staff">
+        <h1 class="content">Банан</h1>
+        <h2 onclick="buy3()" class="content">Купить</h2>
+    </div>
+    <div id="anime4" class="staff">
+        <h1 class="content">Яблоко</h1>
+        <h2 onclick="buy4()" class="content">Купить</h2>
+    </div>
+</body>
+</html>
+
+<script>
+    function buy(){
+        var elem = document.getElementById("anime");
+        var pos = 0;
+        var id = setInterval(frame, 1);
+        var q=0;
+        while (pos!=40){
+            function frame(){
+            if (pos == 40){
+                clearInterval(id);
+            }
+            else{
+                pos++;
+                elem.style.right = pos +'px';
+            }
+        }
+        }
+        var ex = 0;
+        var id0 = setInterval(s , 1);
+        function s(){
+            if (ex==100){
+                clearInterval(id0);
+                elem.style.left = 1000 + 'px';
+                q=1;
+                pos=1000;
+            }
+            else{
+                ex++;
+            }
+        }
+        if (q=1){
+            var id1 = setInterval(frame1, 1);
+            function frame1(){
+                if (pos == 950){
+                    clearInterval(id1);
+                }
+                else{
+                    pos--;
+                    elem.style.right = pos +'px';
+                }
+            }
+        }
+    }
+
+    function buy1(){
+        var elem = document.getElementById("anime1");
+        var pos = 0;
+        while (pos != -50){
+            pos--;
+            elem.style.left = pos +'px';
+        }
+    }
+    function buy2(){
+        var elem = document.getElementById("anime2");
+        var pos = 0;
+        var id = setInterval(frame, 10);
+        function frame(){
+            if (pos == 950){
+                clearInterval(id);
+            }
+            else{
+                pos++;
+                elem.style.left = pos +'px';
+            }
+        }
+    }
+    function buy3(){
+        var elem = document.getElementById("anime3");
+        var pos = 0;
+        var id = setInterval(frame, 10);
+        function frame(){
+            if (pos == 950){
+                clearInterval(id);
+            }
+            else{
+                pos++;
+                elem.style.left = pos +'px';
+            }
+        }
+    }
+    function buy4(){
+        var elem = document.getElementById("anime4");
+        var pos = 0;
+        var id = setInterval(frame, 10);
+        function frame(){
+            if (pos == 950){
+                clearInterval(id);
+            }
+            else{
+                pos++;
+                elem.style.left = pos +'px';
+            }
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function buy(a){
+        if (a==1){
+            counter1++;
+            buy1();
+        }
+        if (a==2){
+            counter2++;
+            buy2();
+        }
+        if (a==3){
+            counter3++;
+            buy3();
+        }
+        if (a==4){
+            counter4++;
+            buy4();
+        }
+        if (a==5){
+            counter5++;
+            buy5();
+        }
+    }
+
+function buy1(){
+        if (elem1.style.left == '950px'){
+            elem1.style.left=0 + 'px';
+            if (elem2.style.left != '950px'){
+                elem2.style.bottom = 0 + 'px';
+            }
+            if (elem3.style.left != '950px'){
+                elem3.style.bottom = 0 + 'px';
+            }
+            if (elem4.style.left != '950px'){
+                elem4.style.bottom = 0 + 'px';
+            }
+            if (elem5.style.left != '950px'){
+                elem5.style.bottom = 0 + 'px';
+            }
+        }
+        else{
+            elem1.style.left=950 + 'px';
+            if (elem2.style.left != '950px'){
+                elem2.style.bottom = 100 + 'px';
+            }
+            if (elem3.style.left != '950px'){
+                elem3.style.bottom = 100 + 'px';
+            }
+            if (elem4.style.left != '950px'){
+                elem4.style.bottom = 100 + 'px';
+            }
+            if (elem5.style.left != '950px'){
+                elem5.style.bottom = 100 + 'px';
+            }
+        }
+    }
+
+    function buy2(){
+        if (elem2.style.left == '950px'){
+            if(elem1.style.left!= '950px'){
+                    elem2.style.left=0 + 'px';
+                if (elem1.style.bottom !='950px'){
+                    elem2.style.bottom = 0 + 'px';
+                }
+                if (elem3.style.left != '950px'){
+                    elem3.style.bottom = 0 + 'px';
+                }
+                if (elem4.style.left != '950px'){
+                    elem4.style.bottom = 0 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.bottom = 0 + 'px';
+                }
+            }
+            if(elem1.style.left=='950px'){
+                elem2.style.left = 0 + 'px';
+                elem2.style.bottom = 100 + 'px';
+                if (elem3.style.left != '950px'){
+                    elem3.style.bottom = 100 + 'px';
+                }
+                if (elem4.style.left != '950px'){
+                    elem4.style.bottom = 100 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.bottom = 100 + 'px';
+                }
+            }
+        }
+        else{
+            elem2.style.left=950 + 'px';
+            if(elem1.style.left!= '950px'){
+                elem2.style.bottom = 100 + 'px';
+                if (elem3.style.left != '950px'){
+                    elem3.style.bottom = 100 + 'px';
+                }
+                if (elem4.style.left != '950px'){
+                    elem4.style.bottom = 100 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.bottom = 100 + 'px';
+                }
+            }
+            if(elem1.style.left=='950px'){
+                elem2.style.bottom = 0 + 'px';
+                if (elem3.style.left != '950px'){
+                    elem3.style.bottom = 200 + 'px';
+                }
+                if (elem4.style.left != '950px'){
+                    elem4.style.bottom = 200 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.bottom = 200 + 'px';
+                }
+            }
+        }
+    }
+
+    function buy3(){
+        if (elem3.style.left == '950px'){
+            elem3.style.left=0 + 'px';
+        }
+        else{
+            elem3.style.left=950 + 'px';
+
+        }
+    }
+
+    function buy4(){
+        if (elem4.style.left == '950px'){
+            elem4.style.left=0 + 'px';
+        }
+        else{
+            elem4.style.left=950 + 'px';
+        }
+    }
+
+    function buy5(){
+        if (elem5.style.left == '950px'){
+            elem5.style.left=0 + 'px';
+        }
+        else{
+            elem5.style.left=950 + 'px';
+        }
+    }
+
+
+
+
+        for (var i=0; i < 5; i++){
+        if (cor[i]!=0){
+            cor[i]=0;
+        }
+    }
+    function buy(a){
+        check(a);
+    }
+
+    function check(a){
+        for (var i=0; i < 5; i++){
+            if (cor[i]==0){
+            cor[i]=a;
+            if (i==0){
+                move1(a) 
+            }
+            if (i==1){
+                move2(a) 
+            }
+            break;
+            }
+        }        
+    }
+    function move1(a){
+        if (a==1){
+            elem1.style.position = 'absolute';
+            elem1.style.marginLeft = 950 + 'px';
+        }
+        if (a==2){
+            elem2.style.position = 'absolute';
+            elem1.style.position = 'absolute';
+            elem2.style.marginLeft = 950 + 'px';
+            if (elem1.style.marginLeft !='950px'){
+                if (elem3.style.left != '950px'){
+                    elem3.style.top = 100 + 'px';
+                }
+                if (elem4.style.left != '950px'){
+                    elem4.style.top = 100 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 100 + 'px';
+                }
+            } 
+        }
+        if (a==3){
+            elem3.style.position = 'absolute';
+            elem2.style.position = 'absolute';
+            elem1.style.position = 'absolute';
+            if (elem2.style.marginLeft !='950px'){
+                elem2.style.marginTop = 100 + 'px';
+            }
+            elem3.style.marginLeft = 950 + 'px';
+            if ((elem1.style.marginLeft =='950px')||(elem2.style.marginLeft =='950px')){
+                if (elem4.style.left != '950px'){
+                    elem4.style.top = 100 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 100 + 'px';
+                }
+            }
+            if ((elem1.style.marginLeft !='950px')&&(elem2.style.marginLeft !='950px')){
+                if (elem4.style.left != '950px'){
+                    elem4.style.top = 200 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 200 + 'px';
+                }
+            }
+        }
+        if (a==4){
+            elem4.style.position = 'absolute';
+            elem3.style.position = 'absolute';
+            elem2.style.position = 'absolute';
+            elem1.style.position = 'absolute';
+            elem4.style.marginLeft = 950 + 'px';
+            if (elem2.style.left != '950px'){
+                    elem2.style.top = 100 + 'px';
+                }
+            if (elem3.style.left != '950px'){
+                elem3.style.top = 200 + 'px';
+            }
+            if ((elem1.style.marginLeft =='950px')||(elem2.style.marginLeft =='950px')||(elem3.style.marginLeft =='950px')){
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 100 + 'px';
+                }
+            }
+            if ((elem1.style.marginLeft !='950px')&&(elem2.style.marginLeft !='950px')||((elem1.style.marginLeft !='950px')&&(elem3.style.marginLeft !='950px'))||((elem1.style.marginLeft !='950px')&&(elem3.style.marginLeft !='950px'))){
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 200 + 'px';
+                }
+            }
+            if ((elem1.style.marginLeft !='950px')&&(elem2.style.marginLeft !='950px')&&(elem3.style.marginLeft !='950px')){
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 300 + 'px';
+                }
+            }
+        }
+        if (a==5){
+            elem5.style.position = 'absolute';
+            elem4.style.position = 'absolute';
+            elem3.style.position = 'absolute';
+            elem2.style.position = 'absolute';
+            elem1.style.position = 'absolute';
+            elem5.style.marginLeft = 950 + 'px';
+            if (elem2.style.left != '950px'){
+                elem2.style.top = 100 + 'px';
+            }
+            if (elem3.style.left != '950px'){
+                elem3.style.top = 200 + 'px';
+            }
+            if (elem4.style.left != '950px'){
+                elem4.style.top = 300 + 'px';
+            }
+        } 
+    }
+
+    function move2(a){
+        if (a==1){
+            elem1.style.position = 'absolute';
+            elem1.style.marginLeft = 950 + 'px';
+            elem1.style.marginTop = 100 + 'px';
+        }
+        if (a==2){
+            elem2.style.position = 'absolute';
+            elem1.style.position = 'absolute';
+            elem2.style.marginLeft = 950 + 'px';
+            elem2.style.marginTop = 100 + 'px';
+            if (elem1.style.marginLeft !='950px'){
+                if (elem3.style.left != '950px'){
+                    elem3.style.top = 100 + 'px';
+                }
+                if (elem4.style.left != '950px'){
+                    elem4.style.top = 100 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 100 + 'px';
+                }
+            } 
+        }
+        if (a==3){
+            elem3.style.position = 'absolute';
+            elem2.style.position = 'absolute';
+            elem1.style.position = 'absolute';
+            elem3.style.marginTop = 100 + 'px';
+            if (elem2.style.marginLeft !='950px'){
+                elem2.style.marginTop = 100 + 'px';
+            }
+            elem3.style.marginLeft = 950 + 'px';
+            if ((elem1.style.marginLeft =='950px')||(elem2.style.marginLeft =='950px')){
+                if (elem4.style.left != '950px'){
+                    elem4.style.top = 100 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 100 + 'px';
+                }
+            }
+            if ((elem1.style.marginLeft !='950px')&&(elem2.style.marginLeft !='950px')){
+                if (elem4.style.left != '950px'){
+                    elem4.style.top = 200 + 'px';
+                }
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 200 + 'px';
+                }
+            }
+        }
+        if (a==4){
+            elem4.style.position = 'absolute';
+            elem3.style.position = 'absolute';
+            elem2.style.position = 'absolute';
+            elem1.style.position = 'absolute';
+            elem4.style.marginLeft = 950 + 'px';
+            elem4.style.marginTop = 100 + 'px';
+            if (elem2.style.left != '950px'){
+                    elem2.style.top = 100 + 'px';
+                }
+            if (elem3.style.left != '950px'){
+                elem3.style.top = 200 + 'px';
+            }
+            if ((elem1.style.marginLeft =='950px')||(elem2.style.marginLeft =='950px')||(elem3.style.marginLeft =='950px')){
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 100 + 'px';
+                }
+            }
+            if ((elem1.style.marginLeft !='950px')&&(elem2.style.marginLeft !='950px')||((elem1.style.marginLeft !='950px')&&(elem3.style.marginLeft !='950px'))||((elem1.style.marginLeft !='950px')&&(elem3.style.marginLeft !='950px'))){
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 200 + 'px';
+                }
+            }
+            if ((elem1.style.marginLeft !='950px')&&(elem2.style.marginLeft !='950px')&&(elem3.style.marginLeft !='950px')){
+                if (elem5.style.left != '950px'){
+                    elem5.style.top = 300 + 'px';
+                }
+            }
+        }
+        if (a==5){
+            elem5.style.position = 'absolute';
+            elem4.style.position = 'absolute';
+            elem3.style.position = 'absolute';
+            elem2.style.position = 'absolute';
+            elem1.style.position = 'absolute';
+            elem5.style.marginLeft = 950 + 'px';
+            elem5.style.marginTop = 100 + 'px';
+            if (elem2.style.left != '950px'){
+                elem2.style.top = 100 + 'px';
+            }
+            if (elem3.style.left != '950px'){
+                elem3.style.top = 200 + 'px';
+            }
+            if (elem4.style.left != '950px'){
+                elem4.style.top = 300 + 'px';
+            }
+        }
+    }
+
+
